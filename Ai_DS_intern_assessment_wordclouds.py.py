@@ -20,6 +20,9 @@ from wordcloud import WordCloud
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 
+#read in data to a dataframe
+movie_data = pd.read_csv('movie_data.csv')
+
 #iterate through summaries of all movies of a given genre..
 #..appending them to a summary list         
 def genre_word_summary(df,genre):
