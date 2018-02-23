@@ -41,10 +41,3 @@ def top_genres(df):
                 genres_dict[word] = 1
     return dict(Counter(genres_dict).most_common(5))
 top_5_genres = print(top_genres(movie_data))
-<<<<<<< HEAD:Ai_DS_intern_assessment_top_genres.py
-=======
- 
-            
-
-            
->>>>>>> ede99ca38702d68bee1953bb837aede7fdd4fe9c:Ai_DS_intern_assessment_top_genres.py
