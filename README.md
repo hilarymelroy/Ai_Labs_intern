@@ -1,5 +1,17 @@
 # Ai_Labs_intern
 Intern assessment for Ai Labs Data Science team
+## Dependencies
+pandas
+Wordcloud
+	conda install -c https://conda.anaconda.org/amueller wordcloud
+matplotlib 
+re 
+os
+Counter
+
+Python 3.6.1
+
+## Usage
 
 For all files - the working directory is set to my desktop, so that will probably 
 need to be changed. Otherwise see the brief descriptions with any instructions needed
