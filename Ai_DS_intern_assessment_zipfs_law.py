@@ -12,15 +12,10 @@ evidence of Zipf's law.
 """
 
 
-import numpy as np
 import pandas as pd
-import seaborn as sns
 import os
 from collections import Counter
 import re
-from nltk.corpus import stopwords
-#from wordcloud import WordCloud
-from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 
 os.chdir('C:\\Users\\hrm1886\\Desktop')
