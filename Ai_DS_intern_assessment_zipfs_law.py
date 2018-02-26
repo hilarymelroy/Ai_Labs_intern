@@ -36,6 +36,8 @@ def zipfs_law(df):
         summary = summary.split(" ")
         
         for word in summary:
+            if word == 's': #get rid of s's that came from plurals
+                continue
             if word in summary_word_dict.keys():
                 summary_word_dict[word] += 1
             else:
@@ -46,13 +48,20 @@ def zipfs_law(df):
 zipfs_dist = zipfs_law(movie_data)
 
 #return the top 5 frequently occuring words
-top_words_zipf = dict(Counter(zipfs_dist).most_common(5))
+top_words_zipf = dict(Counter(zipfs_dist).most_common(15))
+print(top_words_zipf)
 
 #put those words and their values back into dataframe for plotting
 top_words_dataframe = pd.DataFrame.from_dict(top_words_zipf,orient='index')
 
 #plot the results
 ax = top_words_dataframe.plot(kind='bar', title ="Zipf's Distribution",figsize=(15,10),legend=True, fontsize=12)
-ax.set_xlabel("Word",fontsize=12)
-ax.set_ylabel("Frequency",fontsize=12)
+ax.set_xlabel("Word",fontsize=20)
+ax.set_ylabel("Frequency",fontsize=20)
+for tick in ax.get_xticklabels():
+    tick.set_rotation(360)
+    tick.set_fontsize(20)
+for tick in ax.get_yticklabels():
+    tick.set_rotation(45)
+    tick.set_fontsize(15)
 plt.savefig('Word_dist.jpg')
