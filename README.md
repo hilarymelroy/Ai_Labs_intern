@@ -1,13 +1,11 @@
 # Ai_Labs_intern
 Intern assessment for Ai Labs Data Science team
 ## Dependencies
-pandas
-Wordcloud
-	conda install -c https://conda.anaconda.org/amueller wordcloud
-matplotlib 
-re 
-os
-Counter
+* pandas 
+* Wordcloud ```conda install -c https://conda.anaconda.org/amueller wordcloud```
+* matplotlib re 
+* os
+* Counter
 
 Python 3.6.1
 
