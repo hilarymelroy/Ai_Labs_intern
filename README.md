@@ -29,12 +29,10 @@ top_genres function is passed a dataframe 'movie_data'.
 Ai_DS_intern_assessment_wordclouds.py collects all the summaries of the movies of a given genre
 (from the top 5 genre list) and appends them to a list. The list is then stripped of any 
 characters that are not alphanumeric and split on the spaces to create one big list of 
-words from all the summaries. In order to assess the words that are most characteristic of 
-each genre, that list is run through a function that first removes stopwords (i.e. of, the..)
-and then creates a word cloud of the top 100 words in those summaries. To run this file, just
-make sure the genre_word_summary function is passed a dataframe and the genre of choice, and
-that the show_wordcloud function is passed the list of words generated from compiling all of
-the summaries.
+words from all the summaries. The wordcloud function has a built in stopwords set 
+which corrects for the stop words, then creates a word cloud of the top 100 words in those summaries. To run this file, just
+make sure the all_genres_wordcloud() function is passed the movie dataframe. This program needs
+the wordcloud import to run.
 
 Ai_DS_intern_assessment_zipfs_law.py is very similar to Ai_intern_assessment_top_genres, except
 this compiles all the words in all the summaries and adds them to a dictionary. This time, no
